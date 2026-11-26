@@ -33,12 +33,6 @@ const TRIP = {
           "cal": "共有"
         },
         {
-          "start": "17:30",
-          "title": "夕食",
-          "place": "浅草周辺",
-          "kind": "meal"
-        },
-        {
           "start": "19:00",
           "end": "21:00",
           "title": "東京スカイツリー 展望台",
