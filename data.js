@@ -9,7 +9,7 @@ const TRIP = {
       "theme": "移動・浅草・スカイツリー",
       "items": [
         {
-          "start": "13:30",
+          "start": "13:50",
           "title": "成田空港　着",
           "place": "",
           "kind": "hotel",
