@@ -25,7 +25,7 @@ const TRIP = {
           "cal": "共有"
         },
         {
-          "start": "20:30",
+          "start": "20:55",
           "title": "帰宅",
           "place": "北戸田ファーストゲート",
           "kind": "sight",
