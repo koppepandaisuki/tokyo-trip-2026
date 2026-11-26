@@ -300,6 +300,99 @@ body {
   padding: 2px 0;
 }
 
+.header-top { display: flex; gap: 8px; align-items: flex-start; }
+.header-top > div { flex: 1; }
+.gear {
+  flex: 0 0 auto;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.45);
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.gear.linked { background: #fff; }
+.settings {
+  display: none;
+  margin-top: 12px;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 12px;
+  padding: 12px;
+}
+.settings.open { display: block; }
+.settings-title { margin: 0 0 4px; font-size: 13px; font-weight: 700; }
+.settings-desc { margin: 0 0 8px; font-size: 11px; opacity: .85; }
+.settings-row { display: flex; gap: 6px; }
+.settings-row input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+.settings-row button {
+  border: none;
+  background: #fff;
+  color: var(--accent);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.settings-row button.ghost { background: transparent; border: 1px solid rgba(255,255,255,.5); color: #fff; }
+.settings-status { margin: 8px 0 0; font-size: 11px; }
+.save-status { margin: 8px 0 0; font-size: 12px; min-height: 16px; }
+.save-status.ok { color: #bbf7d0; }
+.save-status.err { color: #fecaca; }
+.save-status.busy { opacity: .85; }
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,15,30,.55);
+  z-index: 50;
+  align-items: flex-end;
+  justify-content: center;
+}
+.overlay.open { display: flex; }
+.editor {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card);
+  border-radius: 18px 18px 0 0;
+  padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
+}
+.editor-title { margin: 0 0 12px; font-size: 16px; font-weight: 700; }
+.editor .row { display: flex; gap: 8px; margin-bottom: 10px; }
+.editor input, .editor select {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+}
+.editor .row .t { flex: 2; }
+.editor .row .tm { flex: 1; }
+.editor-warn { margin: 2px 0 10px; font-size: 11px; color: var(--muted); }
+.editor-btns { display: flex; gap: 8px; }
+.editor-btns button {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.editor-btns .primary { background: var(--accent); color: #fff; }
+.editor-btns .ghost { background: var(--bg); color: var(--text); border: 1px solid var(--line); }
+.editor-btns .danger { background: #fee2e2; color: #b91c1c; }
+
 .footer {
   margin: 24px 16px 0;
   padding: 16px;

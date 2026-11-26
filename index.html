@@ -9,9 +9,25 @@
 </head>
 <body>
 <header class="header">
-  <h1 id="title"></h1>
-  <p id="subtitle" class="subtitle"></p>
-  <p id="note" class="note"></p>
+  <div class="header-top">
+    <div>
+      <h1 id="title"></h1>
+      <p id="subtitle" class="subtitle"></p>
+      <p id="note" class="note"></p>
+    </div>
+    <button class="gear" id="gearBtn" title="設定">⚙️</button>
+  </div>
+  <div class="settings" id="settings">
+    <p class="settings-title">GitHub 連携（共有タブの編集に使用）</p>
+    <p class="settings-desc">「共有」タブの予定をこのページから編集・追加するには、GitHub の個人用トークン（repo 権限）を設定します。設定はこの端末に保存されます。設定しなくても「個人」や追加タブの利用は可能です。</p>
+    <div class="settings-row">
+      <input id="ghToken" type="password" placeholder="ghp_ で始まるトークン" autocomplete="off">
+      <button id="ghSave">保存</button>
+      <button id="ghClear" class="ghost">解除</button>
+    </div>
+    <p id="ghStatus" class="settings-status"></p>
+  </div>
+  <p id="saveStatus" class="save-status"></p>
   <a id="icsLink" class="ics-btn" href="trip.ics" download>📅 カレンダーに登録（.ics）</a>
 </header>
 
@@ -28,14 +44,29 @@
 
 <footer class="footer">
   <p><b>カレンダータブについて</b><br>
-  ・「共有」…全員に見える予定（data.js で管理）。<br>
+  ・「共有」…全員に見える予定。⚙️で GitHub 連携すると、このページから直接編集・追加・削除ができます（サイトへの反映まで1分ほど）。<br>
   ・「個人」…Macカレンダーにある自分用の確定予定。<br>
-  ・「＋」でタブ（カレンダー）を自由に追加できます。追加したタブ・予定は
-  <b>その端末（ブラウザ）の中だけ</b>に保存され、他の人には見えません。</p>
+  ・「＋」でタブ（カレンダー）を自由に追加。追加したタブ・予定は<b>その端末（ブラウザ）の中だけ</b>に保存され、他の人には見えません。</p>
   <p>Mac / iPhone のカレンダーに登録するには、上の「カレンダーに登録」から
   trip.ics を開くか、Macカレンダーの「ファイル &gt; 新規カレンダー購読」で<br>
   <code id="subUrl"></code> を購読してください。</p>
 </footer>
+
+<div class="overlay" id="overlay">
+  <div class="editor">
+    <p class="editor-title" id="edTitle">予定を編集</p>
+    <div class="row"><input class="tm" type="time" id="fStart" required><input class="tm" type="time" id="fEnd"></div>
+    <div class="row"><input class="t" id="fTitle" placeholder="予定の名前" required></div>
+    <div class="row"><input class="t" id="fPlace" placeholder="場所（任意）"></div>
+    <div class="row"><select id="fCal"></select></div>
+    <p class="editor-warn" id="edWarn"></p>
+    <div class="editor-btns">
+      <button class="danger" id="edDelete">削除</button>
+      <button class="ghost" id="edCancel">キャンセル</button>
+      <button class="primary" id="edSave">保存</button>
+    </div>
+  </div>
+</div>
 
 <script src="data.js"></script>
 <script src="app.js"></script>
