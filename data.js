@@ -18,9 +18,11 @@ const TRIP = {
         },
         {
           "start": "14:30",
-          "title": "浅草・雷門・浅草寺・仲見世通り",
-          "place": "浅草",
-          "kind": "sight"
+          "title": "コミコン2026",
+          "place": "幕張メッセ",
+          "kind": "sight",
+          "end": "",
+          "cal": "共有"
         },
         {
           "start": "16:30",
