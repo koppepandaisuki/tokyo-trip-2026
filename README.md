@@ -27,9 +27,15 @@ Macカレンダーの「ファイル > 新規カレンダー購読」で下の U
 https://koppepandaisuki.github.io/tokyo-trip-2026/trip.ics
 ```
 
-## 予定を編集する（共有タブの内容）
+## 予定を編集する（ページ上から・推薦）
+
+1. ページ右上の ⚙️ を開き、GitHub の個人用トークン（repo 権限）を1度だけ設定する（その端末に保存）。
+2. 予定をタップして編集・削除、「＋ この日へ予定を追加」で追加。保存すると `data.js` と `trip.ics` が自動でコミットされ、全員の画面に反映される（1分ほど）。
+
+## 予定を編集する（ファイルから）
 
 1. `data.js` を編集する（日付 `days[].date`、予定 `items[]` の `start` / `end` / `title` / `place` / `cal`（「共有」「個人」など）/ `kind`）。
+
 2. `node gen-ics.mjs` で `trip.ics` を再生成する。
 3. コミットして push すればサイトに反映されます（GitHub 画面上の「鉛筆」編集でも可。その場合はPC側で `git pull` してから `node gen-ics.mjs` を実行）。
 
