@@ -21,7 +21,7 @@ const TRIP = {
           "title": "コミコン2026",
           "place": "幕張メッセ",
           "kind": "sight",
-          "end": "",
+          "end": "19:00",
           "cal": "共有"
         },
         {
