@@ -31,11 +31,6 @@ const TRIP = {
           "kind": "sight",
           "end": "",
           "cal": "共有"
-        },
-        {
-          "start": "21:30",
-          "title": "宿へ戻る",
-          "kind": "move"
         }
       ]
     },
