@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1d4ed8">
+<title>東京観光 予定表 2026/12/11-16</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <h1 id="title"></h1>
+  <p id="subtitle" class="subtitle"></p>
+  <p id="note" class="note"></p>
+  <a id="icsLink" class="ics-btn" href="trip.ics" download>📅 カレンダーに登録（.ics）</a>
+</header>
+
+<div class="stickybar">
+  <nav class="caltabs" id="calTabs" aria-label="カレンダーを選ぶ"></nav>
+  <div class="newcal-row" id="newcalRow">
+    <input id="newcalName" placeholder="カレンダー名（例：家族、友達）" maxlength="12">
+    <button id="newcalAdd">追加</button>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="日を選ぶ"></nav>
+</div>
+
+<main id="days"></main>
+
+<footer class="footer">
+  <p><b>カレンダータブについて</b><br>
+  ・「共有」…全員に見える予定（data.js で管理）。<br>
+  ・「個人」…Macカレンダーにある自分用の確定予定。<br>
+  ・「＋」でタブ（カレンダー）を自由に追加できます。追加したタブ・予定は
+  <b>その端末（ブラウザ）の中だけ</b>に保存され、他の人には見えません。</p>
+  <p>Mac / iPhone のカレンダーに登録するには、上の「カレンダーに登録」から
+  trip.ics を開くか、Macカレンダーの「ファイル &gt; 新規カレンダー購読」で<br>
+  <code id="subUrl"></code> を購読してください。</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
