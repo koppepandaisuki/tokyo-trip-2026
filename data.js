@@ -9,10 +9,12 @@ const TRIP = {
       "theme": "移動・浅草・スカイツリー",
       "items": [
         {
-          "start": "13:00",
-          "title": "東京着・宿にチェックイン",
-          "place": "宿（未定）",
-          "kind": "hotel"
+          "start": "13:30",
+          "title": "成田空港　着",
+          "place": "",
+          "kind": "hotel",
+          "end": "",
+          "cal": "共有"
         },
         {
           "start": "14:30",
