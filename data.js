@@ -25,10 +25,12 @@ const TRIP = {
           "cal": "共有"
         },
         {
-          "start": "16:30",
-          "title": "隅田川テラスを散歩",
-          "place": "隅田川テラス",
-          "kind": "sight"
+          "start": "20:30",
+          "title": "帰宅",
+          "place": "北戸田ファーストゲート",
+          "kind": "sight",
+          "end": "",
+          "cal": "共有"
         },
         {
           "start": "17:30",
